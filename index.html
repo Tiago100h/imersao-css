@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiago Giuliatte Pereira</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Press+Start+2P&family=Source+Code+Pro&display=swap"
+        rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/6d6952c5be.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -25,33 +28,92 @@
             <h2 class="site-subtitle">sr. email responder</h2>
         </div>
     </header>
-    <section class="portfolio" id="portfolio">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+
+        <figure class="avatar">
+            <img src="https://avatars3.githubusercontent.com/u/11612870?s=460&u=d959b9bd81eacbe7cfd5e23a47ce4d1cf094c68f&v=4"
+                alt="Tiago Giuliatte Pereira">
+        </figure>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque voluptate maiores pariatur, consequuntur
+            harum corrupti, enim veritatis aliquam sunt numquam corporis! Soluta necessitatibus laborum totam maiores
+            recusandae! Impedit, facilis?</p>
+
+        <p>Quod quos eum doloribus voluptatibus commodi inventore asperiores corrupti illum ea laboriosam ducimus
+            mollitia possimus numquam veritatis accusantium cumque repellat assumenda error natus, dolorem et quia
+            distinctio facilis nisi? Inventore?</p>
+
+        <p>Ipsam est vitae cum? Est doloribus, totam rerum, commodi fugit officiis harum, officia cumque architecto cum
+            numquam. Voluptatem incidunt optio sint natus non maiores accusamus, vero aliquid harum sequi. Deserunt.</p>
+
+        <p>Este site foi contruído durante a <a href="alura.com.br/imersao-css">Imersão CSS da Alura ;)</a></p>
+
+    </section>
+    <section class="portfolio container" id="portfolio">
         <h2>Projetos</h2>
         <div class="grid">
-            <figure>
-                <img class="img-portfolio" src="./img/alura.png" alt="Alura">
-                <figcaption>Alura</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./img/caelum.png" alt="Caelum">
-                <figcaption>Caelum</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./img/hispters.png" alt="Hipsters.Tech">
-                <figcaption>Hipsters.Tech</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./img/likeaboss.png" alt="Like a Boss">
-                <figcaption>Like a Boss</figcaption>
-            </figure>
-            <figure>
-                <img class="img-portfolio" src="./img/hobby.png" alt="Handstand">
-                <figcaption>Handstand</figcaption>
-            </figure>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/alura.png" alt="Alura">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Alura</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/caelum.png" alt="Caelum">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Caelum</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/hispters.png" alt="Hipsters.Tech">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Hipsters.Tech</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/likeaboss.png" alt="Like a Boss">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Like a Boss</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="card">
+                    <figure class="card-front">
+                        <img class="img-portfolio" src="./img/hobby.png" alt="Handstand">
+                    </figure>
+                    <div class="card-back">
+                        <h3>Handstand</h3>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
         <h2>Contato</h2>
+
         <div class="grid icons">
             <a target="_blank" href="https://github.com/tiago100h">
                 <i class="fab fa-github"></i>
@@ -66,6 +128,7 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
+
     </section>
 </body>
 

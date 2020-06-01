@@ -23,6 +23,8 @@ body {
 /* breakpoint */
 @media (min-width: 600px) {
     body {
+        background-attachment: fixed;
+        background-size: cover;
         font-size: 18px;
     }
 }
@@ -82,14 +84,17 @@ a:hover {
 .titulo {
     transform: scale(0.2) translateY(50vh);
     opacity: 0;
-
-    animation: linear 2s animacaoTitulo forwards ;
+    animation: 1s ease 500ms animacaoTitulo forwards ;
 }
 
 @keyframes animacaoTitulo {
+    from {
+        transform: scale(0.2) translateY(50vh);
+        opacity: 0;
+    }
     to {
-        transform: scale(1) translateY(0);
-        opacity: 1;
+    transform: scale(1) translateY(0);
+    opacity: 1;
     }
 }
 
@@ -110,18 +115,58 @@ a:hover {
     line-height: 1.8em;
 }
 
+.sobre,
 .contato,
 .portfolio {
     padding: 2em;
     min-height: 100vh;
 }
 
+@media (min-width: 1200px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1200px;
+    }   
+}
+
+.sobre h2,
 .contato h2,
 .portfolio h2 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
     color: whitesmoke;
     margin-bottom: 1.5em;
+}
+
+.sobre p {
+    color: white;
+    margin-bottom: 1.4em;
+    text-indent: 1.4em;
+    text-align: justify;
+}
+
+.sobre a {
+    color: white;
+    text-decoration: underline;
+}
+
+.sobre a:hover {
+    background-color: cyan;
+    text-decoration: none;
+    color: magenta;
+}
+
+.sobre .avatar {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+    .sobre .avatar {
+        clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+        float: right;
+    }   
 }
 
 .portfolio .grid {
@@ -137,11 +182,45 @@ a:hover {
 
 @media (min-width: 880px) {
     .portfolio .grid {
-        grid-template-columns: repeat(3, 240px);
+        grid-template-columns: repeat(3, 260px);
         align-content: center;
         justify-content: center;
         height: calc(100vh - 8em - 48px);
     }   
+}
+
+.flip-card {
+    height: 180px;
+    perspective: 1000px;
+}
+
+.flip-card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 3s;
+}
+
+.card-front,
+.card-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .7);
+    height: 180px;
+    width: 100%;
+    transform: rotateY(180deg);
 }
 
 .portfolio figure {
@@ -150,16 +229,15 @@ a:hover {
 
 .img-portfolio {
     height: 180px;
-    width: 240px;
+    width: 100%;
     object-fit: cover;
     object-position: left bottom;
-    transform: scale(1);
     transition: transform 500ms;
 }
 
-.img-portfolio:hover {
-    transform: scale(1.2) rotate(-2deg);
-}
+/* .img-portfolio:hover {
+  transform: scale(1.2) rotate(-2deg);
+} */
 
 .contato .icons {
     text-align: center;
